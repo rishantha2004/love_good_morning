@@ -57,12 +57,12 @@ body{
 
 .new{
     display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #ffcccb;
-  font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffcccb;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .heart{
@@ -73,7 +73,6 @@ body{
     transform: rotate(-45deg);
     box-shadow: -10px, 10px, 90px #f20044;
     animation: heart 0.6s linear infinite;
-
 }
 @keyframes heart{
     0%{
@@ -97,8 +96,6 @@ body{
     top: -50%;
     border-radius: 50px;
     box-shadow: -10px, 10px, 90px #f20044;
-
-
 }
 
 .heart:after{
@@ -110,20 +107,16 @@ body{
     right: -50%;
     border-radius: 50px;
     box-shadow: -10px, 10px, 90px #f20044;
-
-
 }
-
-
 
 h1 {
     color: #ff1493;
     font-size: 3em;
     text-align: center;
     animation: romanticAnimation 5s infinite;
-  }
+}
   
-  @keyframes romanticAnimation {
+@keyframes romanticAnimation {
     0%, 100% {
       transform: scale(1) rotate(0deg);
       opacity: 1;
@@ -132,19 +125,32 @@ h1 {
       transform: scale(1.2) rotate(5deg);
       opacity: 0.8;
     }
-  }
-
-
-
+}
   
-  @keyframes float {
+@keyframes float {
     0%, 100% {
       transform: translateY(0);
     }
     50% {
       transform: translateY(-10px);
     }
-  }
+}
 
-
-  
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) {
+    .bubbles span {
+        width: 20px;
+        height: 20px;
+    }
+    .heart {
+        height: 50px;
+        width: 50px;
+    }
+    .heart:before, .heart:after {
+        height: 50px;
+        width: 50px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
